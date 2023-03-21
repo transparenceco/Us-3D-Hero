@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    --progress-bar-color: transparent;
+  }
+  
+  model-viewer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hero-section {
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #121212;
+  }
+
+  .circle {
+    width: 1200px;
+    height: 1200px;
+    background: linear-gradient(142.16deg, #D43939 51.7%, #BC0089 76.15%);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    animation: wiggle 20s linear infinite;
+  }
+
+  @keyframes wiggle {
+    0% {
+      transform: translate(30%, 100%) 
+    }
+    50% {
+      transform: translate(30%, 30%) 
+    }
+    100% {
+      transform: translate(30%, 100%)
+    }
+  }
+
+  .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(90px);
+  }
+
+  .overlay-content {
+    max-width:50%;
+    position: absolute;
+    left: 100px;
+    color: #E5E5E5;
+    z-index: 1;
+  }
+
+  .overlay-content h1 {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 150px;
+  line-height: 50px;
+  }
+
+
+
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+  </head>
+  <body>
+
+
+    <div class="hero-section">
+      
+      <div class="circle"></div>
+      
+      <div class="overlay"></div>
+
+
+      <model-viewer id="model-viewer" camera-controls disable-zoom auto-rotate auto-rotate-delay="0" rotation-per-second="600%">
+
+        <script>
+          const models = [
+          'https://uscommunications.ca/3d/ramal.glb',
+          'https://uscommunications.ca/3d/monkey.glb',
+          'https://uscommunications.ca/3d/cylinder.glb',
+          'https://uscommunications.ca/3d/ico.glb',
+          'https://uscommunications.ca/3d/torus.glb',
+          ];
+          const modelViewer = document.getElementById('model-viewer');
+          let currentModelIndex = 0;
+          let originalCameraPosition = null;
+  
+          function loadNextModel() {
+            currentModelIndex = (currentModelIndex + 1) % models.length;
+            modelViewer.src = models[currentModelIndex];
+            setTimeout(loadNextModel, 3000);
+          }
+  
+          function resetCameraPosition() {
+            if (originalCameraPosition) {
+              modelViewer.cameraOrbit = originalCameraPosition;
+              originalCameraPosition = null;
+            }
+          }
+  
+          loadNextModel();
+  
+          modelViewer.addEventListener('camera-change', () => {
+            if (!originalCameraPosition) {
+              originalCameraPosition = modelViewer.cameraOrbit;
+            }
+          });
+  
+          modelViewer.addEventListener('click', resetCameraPosition);
+          modelViewer.addEventListener('dblclick', resetCameraPosition);
+        </script>
+      </model-viewer>
+
+
+
+      <div class="overlay-content">
+         <img src="us.png" style="width:200px;">
+      </div>
+    
+    </div>
+
+
+    
+  </body>
+</html>
