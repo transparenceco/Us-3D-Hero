@@ -4,18 +4,17 @@ body {
     overflow: hidden;
     --progress-bar-color: transparent;
   }
-  
-  model-viewer {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
 
   * {
     margin: 0;
     padding: 0;
+  }
+
+  .uslogo{
+   width: 100px;
+    position:absolute;
+    top:100px;
+    left:100px;
   }
 
   .hero-section {
@@ -29,6 +28,9 @@ body {
   }
 
   .circle {
+    position: absolute;
+    bottom:-50px;
+    left:100px;
     width: 1200px;
     height: 1200px;
     background: linear-gradient(142.16deg, #D43939 51.7%, #BC0089 76.15%);
@@ -37,24 +39,11 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute;
-    animation: wiggle 20s linear infinite;
-  }
-
-  @keyframes wiggle {
-    0% {
-      transform: translate(30%, 100%) 
-    }
-    50% {
-      transform: translate(30%, 30%) 
-    }
-    100% {
-      transform: translate(30%, 100%)
-    }
   }
 
   .overlay {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
     top: 0;
     left: 0;
@@ -62,9 +51,10 @@ body {
   }
 
   .overlay-content {
-    max-width:50%;
+    max-width:80%;
     position: absolute;
-    left: 100px;
+    bottom: 300px;
+    left: 80px;
     color: #E5E5E5;
     z-index: 1;
   }
@@ -73,6 +63,16 @@ body {
   font-family: 'Century Gothic';
   font-style: normal;
   font-weight: 600;
-  font-size: 200px;
-  line-height: 50px;
+  font-size: 6.5rem;
+  line-height: 6.5rem;
+  }
+
+  /* This is the CSS for the 3d components inside the hero */
+    
+  model-viewer {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
   }
