@@ -1,6 +1,5 @@
 // This code lists the 3d models in an array and rotates between them every 4 seconds
 
-
 const models = [
 '3dmodels/hero/people.glb',
 '3dmodels/hero/doggolovers.glb',
