@@ -1,0 +1,328 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+body {
+  color: #e5e5e5;
+  background-color: #121212;
+}
+
+#canvas {
+  /*background: radial-gradient(50% 90% ellipse at left, #201e40 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(50% 90% ellipse at right, #261226 0%, #100a1c 100%);*/
+  z-index: 1;
+}
+
+.pointcloudcircle {
+}
+
+.hero-section {
+  height: 650px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #121212;
+  overflow: hidden;
+}
+
+@media (min-width: 576px) {
+  .hero-section {
+    height: 100vh;
+  }
+}
+
+.circle {
+  width: 900px;
+  height: 900px;
+  background: linear-gradient(142.16deg, #D43939 51.7%, #BC0089 76.15%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 0;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: translate(30%, 90%);
+  }
+  50% {
+    transform: translate(30%, 20%);
+  }
+  100% {
+    transform: translate(30%, 100%);
+  }
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(90px);
+  -webkit-backdrop-filter: blur(90px);
+}
+
+.overlay-content {
+  width: 400px;
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+  color: #E5E5E5;
+  z-index: 1;
+}
+
+@media (min-width: 576px) {
+  .overlay-content {
+    bottom: 100px;
+    left: 80px;
+    width: 640px;
+  }
+}
+
+@media (min-width: 992px) {
+  .overlay-content {
+    bottom: 110px;
+    left: 10%;
+    width: 550px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .overlay-content {
+    bottom: 110px;
+    left: 10%;
+    width: 600px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .overlay-content {
+    bottom: 110px;
+    left: 20%;
+    width: 550px;
+  }
+}
+
+.overlay-content h1 {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 44px;
+  line-height: 40px;
+}
+
+@media (min-width: 576px) {
+  .overlay-content h1 {
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+.overlay-content p {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 25px;
+}
+
+.solutions, .contact {
+  padding: 2rem 1.25rem;
+}
+
+h1 {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 50px;
+}
+
+h2 {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 99%;
+}
+
+h3 {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 99%;
+  letter-spacing: 0.02em;
+}
+
+body {
+  background-color: #121212;
+}
+
+h4 {
+  font-family: 'Century Gothic';
+  color: #d43939;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.accordion {
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  /*--bs-accordion-icon-color: #e5e5e5;*/
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.accordion-1, .accordion-button {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 99%;
+  color: #E5E5E5;
+}
+
+.accordion-header, .accordion-button, .accordion-item {
+  background: transparent;
+  --bs-accordion-active-color: #e5e5e5;
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-border-width: 0;
+  /*border-bottom: #e5e5e5;*/
+  border-width: 1;
+}
+
+.accordion-item {
+  border-width: 1px;
+  border-color: rgba(229, 229, 229, 0.2);
+}
+
+.accordion-button {
+  color: var(--bs-accordion-btn-color);
+  --bs-accordion-btn-color: #e5e5e5;
+}
+
+p {
+  font-size: 1em;
+  color: #e5e5e5;
+}
+
+.accordion-button.collapsed::after {
+  /*background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='white'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");*/
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--bs-accordion-btn-active-icon);
+}
+
+.btn {
+  background: transparent;
+  border-color: #e5e5e5;
+  border-radius: 32px;
+  /*width: 150px;*/
+  padding: .75rem;
+  min-width: 180px;
+  /*height: 50px;*/
+  font-family: Inter, sans-serif;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.uslogo {
+  max-width: 60px;
+}
+
+.branding {
+  z-index: 1;
+  position: absolute;
+  top: 30px;
+  padding: 20px;
+}
+
+.imageswap {
+  width: 500px;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  z-index: 1;
+}
+
+@media (min-width: 576px) {
+  .imageswap {
+    width: 700px;
+    top: 100px;
+    left: 100px;
+  }
+}
+
+@media (min-width: 992px) {
+  .imageswap {
+    width: 800px;
+    top: 100px;
+    left: 240px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .imageswap {
+    width: 1000px;
+    top: 0px;
+    left: 400px;
+  }
+}
+
+a {
+  color: #e5e5e5;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #D43939;
+}
+
+@media (max-width: 767px) {
+  .footer-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-desktop {
+    display: none;
+  }
+}
+
+.btn-primary {
+  --bs-btn-hover-color: #121212;
+  --bs-btn-hover-bg: #E5E5E5;
+  --bs-btn-hover-border-color: #E5E5E5;
+  --bs-btn-active-bg: #e5e5e5;
+}
+
+/* This is the CSS for the 3d components inside the hero */
+
+model-viewer {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+model-viewer {
+  --progress-bar-color: transparent;
+}
+

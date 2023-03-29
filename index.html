@@ -1,48 +1,118 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="style.css">
+<html lang="en">
 
-<!-- This is the script that resizes the backdrop-filter in case the window is resized -->
-    <script src="blurresize.js"></script>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Us 2023 home page</title>
+    <meta name="" content="">
+    <meta name="theme-color" content="#121212">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Century%20Gothic.css">
+    <link rel="stylesheet" href="assets/css/Inter.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+</head>
 
-<!-- This is the Model-viewer module: -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
-  
-  </head>
-  <body>
-
-
+<body>
     <div class="hero-section">
- <!-- This adds the background circle and the overlay: -->
+        <div class="circle"></div>
+        <div class="overlay"></div> <!-- This is the code that adds the 3D models into the hero: -->
 
- <div class="circle"></div>
- <div class="overlay"></div>
-
-<!-- This is the logo and the hero copy: -->
-
-      <img src="us.png" class="uslogo" style="width:200px;">
-      <div class="overlay-content">
-         <h1>
-          Us brings<br>
-          brands and <br>
-          midnight tokers<br>
-          together
-        </h1>
-      </div>
-
-
-
- <!-- This is the code that adds the 3D models into the hero: -->
-
-      <model-viewer id="model-viewer" interaction-prompt="none" disable-zoom auto-rotate auto-rotate-delay="0" rotation-per-second="600%">
-          <script src="us3D.js"></script>
-      </model-viewer>
-
-    
+<model-viewer id="model-viewer" camera-controls="false" disable-zoom auto-rotate auto-rotate-delay="0" rotation-per-second="600%">
+<script src="us3D.js"></script></model-viewer>
+        <div class="container float-start branding"><img class="uslogo" src="assets/img/uslogo.png"></div>
+        <div class="overlay-content">
+            <h1 style="padding-bottom: 0px;margin-bottom: 0px;">Us brings<br>brands and</h1>
+            <h1><a class="typewrite" href="" data-type="[ &quot;people&quot;, &quot;doggo lovers&quot;,&quot;midnight tokers&quot;, &quot;beer geeks&quot;,&quot;gamers&quot;,&quot;homegrowers&quot;,&quot;new canucks&quot;,&quot;moguls&quot;]" data-period="4000"><span class="wrap"></span></a></h1>
+            <h1 style="margin-bottom: 52px;padding-top: 0px;margin-top: -5px;">together</h1><a href="#solutions"><button class="btn btn-primary" type="button">see how</button></a>
+        </div>
     </div>
+    <div class="container solutions" id="solutions-1" style="padding-top: 70px;">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>solutions</h4>
+                <div class="accordion accordion-flush" role="tablist" id="accordion-2">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-2 .item-1" aria-expanded="false" aria-controls="accordion-2 .item-1">strategy</button></h2>
+                        <div class="accordion-collapse collapse item-1" role="tabpanel" data-bs-parent="#accordion-2">
+                            <div class="accordion-body">
+                                <p class="mb-0">Finding what connects us begins with the right strategy, and we work hard to find it.&nbsp;Our target audiences may be different from project to project, but they always have one thing in common: they are human. Messy, flawed, emotional, beautiful human beings. We specialize in researching, analyzing, testing and ultimately discovering the best way to connect with them.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-2 .item-2" aria-expanded="false" aria-controls="accordion-2 .item-2">creative</button></h2>
+                        <div class="accordion-collapse collapse item-2" role="tabpanel" data-bs-parent="#accordion-2">
+                            <div class="accordion-body">
+                                <p class="mb-0">Our creative team discovers the things that make people and brands feel closer to one another. They dive deep into the depths of the human psyche – and the internet of course – to mine insights that help brands connect emotionally with their target. The solutions come in many shapes and sizes – from ads to digital experiences to XM. Oh, and of course we make it sound and look damn pretty.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-2 .item-3" aria-expanded="false" aria-controls="accordion-2 .item-3">production</button></h2>
+                        <div class="accordion-collapse collapse item-3" role="tabpanel" data-bs-parent="#accordion-2">
+                            <div class="accordion-body">
+                                <p class="mb-0">We don’t just think about things, we make them.&nbsp;From pre-production to post-production, bringing things to life is a huge part of who we are and what drives us. This includes digital production, audio design,&nbsp;photography, videography, editing and so much more.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" role="tab"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#accordion-2 .item-4" aria-expanded="false" aria-controls="accordion-2 .item-4">development</button></h2>
+                        <div class="accordion-collapse collapse item-4" role="tabpanel" data-bs-parent="#accordion-2">
+                            <div class="accordion-body">
+                                <p class="mb-0">If we can dream it up, our team of talented developers can figure out a way to make it happen. From interactive tech to website development, we have the capability, creativity and passion to bring impactful digital solutions to life.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div style="background: var(--bs-red);width: 100%;height: 100%;border-radius: 37px;"><iframe allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/FNsJZWOKEAA" width="100%" height="100%"></iframe></div>
+            </div>
+        </div>
+    </div>
+    <div class="container footer-desktop" style="margin-bottom: 100px;">
+        <div class="row" style="margin-bottom: 29px;padding-bottom: 53px;padding-left: 10px;">
+            <div class="col-md-12">
+                <h4 style="margin-bottom: 17px;">contact</h4>
+            </div>
+            <div class="col-md-6">
+                <h2 style="margin-bottom: 42px;">let's connect</h2>
+            </div>
+            <div class="col-md-6">
+                <h3>new business</h3>
+                <p class="mb-0" style="padding-bottom: 20px;"><a href="mailto:matt@uscommunications.ca">matt@uscommunications.ca</a></p>
+                <h3>inquiries</h3>
+                <p class="mb-0" style="padding-bottom: 20px;"><a href="mailto:ramal@uscommunications.ca">ramal@uscommunications.ca</a></p>
+                <h3>join us</h3>
+                <p class="mb-0" style="padding-bottom: 31px;"><a href="mailto:careers@uscommunications.ca">careers@uscommunications.ca</a></p><a href="https://www.instagram.com/uscommunications"><i class="fab fa-instagram" style="font-size: 30px;"></i></a><a href="https://ca.linkedin.com/company/us-communications"><i class="fab fa-linkedin-in" style="font-size: 30px;margin-left: 30px;"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="container footer-mobile" style="padding-top: 43px;margin-bottom: 100px;">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 style="margin-bottom: 17px;">contact</h4>
+            </div>
+            <div class="col-md-6">
+                <h2 style="margin-bottom: 42px;">let's<br>connect</h2><a href="https://www.instagram.com/uscommunications"><i class="fab fa-instagram" style="font-size: 30px;"></i></a><a href="https://ca.linkedin.com/company/us-communications"><i class="fab fa-linkedin-in" style="font-size: 30px;margin-left: 30px;"></i></a>
+            </div>
+            <div class="col-md-6">
+                <h3>new business</h3>
+                <p class="mb-0" style="padding-bottom: 20px;"><a href="mailto:matt@uscommunications.ca">matt@uscommunications.ca</a></p>
+                <h3>inquiries</h3>
+                <p class="mb-0" style="padding-bottom: 20px;"><a href="mailto:ramal@uscommunications.ca">ramal@uscommunications.ca</a></p>
+                <h3>join us</h3>
+                <p class="mb-0"><a href="mailto:careers@uscommunications.ca">careers@uscommunications.ca</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/overlayresize.js"></script>
+    <script src="assets/js/typewriter.js"></script>
+    <script src="assets/js/us3D.js"></script>
+</body>
 
-
-    
-  </body>
 </html>
